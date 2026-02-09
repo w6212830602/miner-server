@@ -1,16 +1,52 @@
-# miner_app
+# BTC Miner Monitor
 
-A new Flutter project.
+A proof-of-concept cross-platform tool for scanning and monitoring Bitcoin miners on a local network.
 
-## Getting Started
+This project was built as part of a technical interview task to demonstrate learning a new tech stack, system design, and development workflow within a limited timeframe.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## Tech Stack
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Frontend: Flutter
+- Backend: Go
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## Overview
+
+The goal of this project is to replicate the core functionality of tools like BTC Tools, focusing on:
+
+- Scanning a local IP or IP range
+- Detecting miner online/offline status
+- Displaying results in a simple, demo-friendly UI
+
+The scope is intentionally limited to ensure reliability and clarity during the demo.
+
+---
+
+## Architecture
+
+**Backend (Go)**
+- Handlers → Services → Clients → Models
+- Concurrent scanning with configurable timeouts
+- Supports real or mock miner clients
+
+**Frontend (Flutter)**
+- Models, services, screens, and reusable widgets
+- Simple state handling (loading, error, results)
+
+---
+
+## Running the Project
+
+### Backend
+```bash
+cd backend
+go run main.go
+
+
+### Frontend
+cd miner_app
+flutter pub get
+flutter run
