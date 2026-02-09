@@ -34,7 +34,7 @@ class MinerDetailScreen extends StatelessWidget {
                 const SizedBox(height: 12),
                 Text('Status: ${miner.status}'),
                 const SizedBox(height: 8),
-                Text('Notes: This is a PoC. Next step would be to fetch real metrics (hashrate, temp, power).'),
+                Text('Notes: This is a PoC. In a real app, you might show more details here, like last seen time, miner model, etc.'),
               ],
             ),
           ),
